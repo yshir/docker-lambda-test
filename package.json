@@ -1,0 +1,13 @@
+{
+  "name": "shopify-lambda-test",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "docker run --rm -v \"$PWD\":/var/task lambci/lambda:nodejs10.x index.handler '{\"runtime\": \"nodejs10.x\"}'"
+  },
+  "author": "yshir",
+  "license": "UNLICENCED",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
