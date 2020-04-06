@@ -1,5 +1,5 @@
 {
-  "name": "shopify-lambda-test",
+  "name": "docker-lambda-test",
   "version": "1.0.0",
   "scripts": {
     "dev": "docker run --rm -v \"$PWD\":/var/task lambci/lambda:nodejs10.x src/index.handler '{\"runtime\": \"nodejs10.x\"}'",
