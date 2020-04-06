@@ -76,14 +76,22 @@ const main = async () => {
   console.log('build finished')
 
   console.log('deploy started...')
+  
+  let alreadyExistsFunction = true
   try {
     await get()
+  } catch (err) {
+    alreadyExistsFunction = false
+  }
+  
+  if (alreadyExistsFunction) {
     await update()
     console.log('function updated')
-  } catch (err) {
+  } else {
     await create()
     console.log('function created')
   }
+  
   console.log('deploy finished')
 
   const endTime = performance.now()
